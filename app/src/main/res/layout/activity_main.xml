@@ -2,14 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:orientation="vertical"
@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/enter_values_text"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
@@ -27,22 +27,12 @@
             android:layout_marginTop="8dp"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/enter_text"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/loan_amt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/calculate_button"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="#ffff00"
-            android:onClick="calculateAmt"
-            android:text="@string/click_to_calculate"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="121dp" />
 
         <EditText
             android:id="@+id/loan_amt"
@@ -77,15 +67,72 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loan_amt" />
 
-        <TextView
-            android:id="@+id/five_year_view"
+        <Button
+            android:id="@+id/calculate_button"
             android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:background="#ffff00"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="calculateAmt"
+            android:padding="8dp"
+            android:text="@string/click_to_calculate"
+            android:textColor="#ffff00"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="121dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:divider="@color/colorPrimaryDark"
+            android:dividerPadding="8dp"
             android:gravity="center_vertical|center_horizontal"
-            android:text="@string/_5_year_monthly_payments"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp" />
+            android:orientation="horizontal"
+            android:paddingTop="@android:dimen/app_icon_size">
+
+            <TextView
+                android:id="@+id/five_year_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffff00"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="8dp"
+                android:text="@string/_5_year_monthly_payments"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/ten_year_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffff00"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="8dp"
+                android:text="@string/_10_year_monthly_payments"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal|fill_horizontal|center|fill"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/fifteen_year_view"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="#ffff00"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/_15_year_monthly_payments"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

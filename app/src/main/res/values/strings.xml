@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">College Loan</string>
+    <string name="app_name">College Loan Monthly Payment Calculator</string>
     <string name="enter_text">Enter Values Below</string>
-    <string name="amt_of_loan">amt of loan</string>
-    <string name="annual_interest_rate">annual interest rate</string>
-    <string name="click_to_calculate">click to calculate</string>
-    <string name="_5_year_monthly_payments">5 year monthly payments</string>
-    <string name="_10_year_monthly_payments">10 year monthly payments</string>
-    <string name="_15_year_monthly_payments">15 year monthly payments</string>
+    <string name="amt_of_loan">Loan Amount (ie. 5000) </string>
+    <string name="annual_interest_rate">annual interest rate (ie. 4.5)</string>
+    <string name="click_to_calculate">click here to calculate your monthly payment</string>
+    <string name="_5_year_monthly_payments">5 year Monthly Payment Amt.</string>
+    <string name="_10_year_monthly_payments">10 year Monthly Payment Amt.</string>
+    <string name="_15_year_monthly_payments">15 year Monthly Payment Amt.</string>
     <string name="recalculate">Recalculate</string>
 </resources>
